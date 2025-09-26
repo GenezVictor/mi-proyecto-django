@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Portafolio</title>
+</head>
+<body>
+    <h1>¡Hola! Bienvenido a mi portafolio</h1>
+    
+    <h2>Proyectos Destacados</h2>
+    {% for proyecto in proyectos %}
+        <div>
+            <h3>{{ proyecto.titulo }}</h3>
+            <p>{{ proyecto.descripcion }}</p>
+            <p><strong>Tecnologías:</strong> {{ proyecto.tecnologias }}</p>
+        </div>
+    {% empty %}
+        <p>Aún no hay proyectos destacados.</p>
+    {% endfor %}
+</body>
+</html>
